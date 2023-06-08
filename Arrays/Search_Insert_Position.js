@@ -1,6 +1,7 @@
 let arr = [1,2,3,5,6];
 let target = 4;
 let res = SearchInsert(arr,target);
+console.log(res);
 function SearchInsert(nums,target){
     let left = 0;
     let right = nums.length - 1;
