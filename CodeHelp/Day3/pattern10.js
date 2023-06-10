@@ -7,7 +7,7 @@ function printPattern(n) {
       }
   
       for (let column = 1; column <= n - row + 1; column++) {
-        pattern += '* ';
+        pattern += '*   ';
       }
   
       console.log(pattern);

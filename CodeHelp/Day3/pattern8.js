@@ -1,16 +1,22 @@
-function printPattern(rows) {
-    for (let i = 1; i <= rows; i++) {
+function printPattern(n) {
+    let odd = 1;
+  
+    for (let row = 1; row <= n; row++) {
       let pattern = '';
-      for (let j = 1; j <= rows - i; j++) {
-        pattern += ' ';
+  
+      for (let spaces = 1; spaces <= row - 1; spaces++) {
+        pattern += '  ';
       }
-      for (let k = 1; k <= i; k++) {
+  
+      for (let column = 1; column <= 2 * n - odd; column++) {
         pattern += '* ';
       }
+  
+      odd += 2;
       console.log(pattern);
     }
   }
   
   // Example usage:
-  printPattern(5);
+  printPattern(4);
   

@@ -1,16 +1,19 @@
-function printPattern(rows) {
-    for (let i = 1; i <= rows; i++) {
+function printPattern(n) {
+    for (let row = 1; row <= n; row++) {
       let pattern = '';
-      for (let j = 1; j <= rows - i; j++) {
-        pattern += ' ';
+  
+      for (let spaces = 1; spaces <= n - row; spaces++) {
+        pattern += '  ';
       }
-      for (let k = 1; k <= 2 * i - 1; k++) {
-        pattern += '*';
+  
+      for (let column = 1; column <= 2 * row - 1; column++) {
+        pattern += '* ';
       }
+  
       console.log(pattern);
     }
   }
   
   // Example usage:
-  printPattern(5);
+  printPattern(4);
   

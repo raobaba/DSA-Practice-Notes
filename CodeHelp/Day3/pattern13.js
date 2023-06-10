@@ -6,8 +6,11 @@ function printPattern(n) {
         pattern += '  ';
       }
   
+      let c = 1;
+  
       for (let column = 1; column <= row; column++) {
-        pattern += '* ';
+        pattern += c + '   ';
+        c = (c * (row - column)) / column;
       }
   
       console.log(pattern);
@@ -15,5 +18,5 @@ function printPattern(n) {
   }
   
   // Example usage:
-  printPattern(4);
+  printPattern(5);
   

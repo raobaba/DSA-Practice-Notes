@@ -1,13 +1,16 @@
-function printPattern(rows) {
-    const middleRow = Math.ceil(rows / 2);
-    for (let i = 1; i <= rows; i++) {
+function printPattern(n) {
+    for (let row = 0; row < 2 * n; row++) {
+      let totalColsInRow = row > n ? 2 * n - row : row;
       let pattern = '';
-      const maxNumbers = i <= middleRow ? i : rows - i + middleRow;
-      for (let j = 1; j <= maxNumbers; j++) {
-        pattern += j + ' ';
+  
+      for (let column = 0; column < totalColsInRow; column++) {
+        pattern += (column + 1) + ' ';
       }
-      console.log(pattern.trim());
+  
+      console.log(pattern);
     }
   }
-  printPattern(5);
+  
+  // Example usage:
+  printPattern(4);
   

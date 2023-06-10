@@ -1,13 +1,17 @@
-function printPattern(rows) {
-    for (let i = 1; i <= rows; i++) {
+// Pattern 4
+function printPattern(noOfRows) {
+    for (let row = 1; row <= noOfRows; row++) {
       let pattern = '';
-      for (let j = 1; j <= i; j++) {
-        pattern += j + ' ';
+  
+      for (let column = 1; column <= row; column++) {
+        pattern += column + ' ';
       }
-      console.log(pattern.trim());
+  
+      console.log(pattern);
     }
   }
   
   // Example usage:
   printPattern(4);
+  
   
