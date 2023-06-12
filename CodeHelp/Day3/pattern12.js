@@ -1,37 +1,26 @@
 function printPattern(n) {
-    let inSpace = 1;
-    let inBelowSpace = 2 * n - 5;
+    let inSpace = 2 * n - 1 - 4;
   
-    for (let row = 1; row <= 2 * n - 1; row++) {
-      let totalColumns = 1;
-  
-      if (row !== 1 && row !== 2 * n - 1) {
-        totalColumns = 2;
-      }
-  
-      let totalSpaces = row > n ? row - n : n - row;
-  
+    for (let row = 1; row <= n; row++) {
       let pattern = '';
   
-      for (let space = 1; space <= totalSpaces; space++) {
+      for (let spaces = 1; spaces <= row - 1; spaces++) {
         pattern += ' ';
+      }
+  
+      let totalColumns = row !== n ? 2 : 1;
+      if (row === 1) {
+        totalColumns = 2 * n - 1;
       }
   
       for (let column = 1; column <= totalColumns; column++) {
         pattern += '*';
   
-        if (row > 1 && row <= n) {
+        if (row >= 2 && row !== n) {
           for (let space = 1; space <= inSpace; space++) {
             pattern += ' ';
           }
-          inSpace += 1;
-        }
-  
-        if (row > n) {
-          for (let space = 1; space <= inBelowSpace; space++) {
-            pattern += ' ';
-          }
-          inBelowSpace--;
+          inSpace -= 1;
         }
       }
   
