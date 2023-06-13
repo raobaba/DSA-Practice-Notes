@@ -4,12 +4,13 @@ console.log('true');
 else
 console.log('false');
 function isPowerOfTwo(n) {
+    let limit = Math.pow(2,31);
     let ans = 1;
     for (let i = 0; i <= 30; i++) {
       if (ans === n) {
         return true;
       }
-      if (ans < Math.floor(Number.MAX_SAFE_INTEGER / 2)) {
+      if (ans < limit) {
         ans = ans * 2;
       }
     }
