@@ -1,4 +1,4 @@
-let res = isPowerOfTwo(3);
+let res = isPowerOfTwo(32);
 if(res)
 console.log('true');
 else
