@@ -1,4 +1,4 @@
-let n = 110; // Replace 12345 with the desired number
+let n = 110; 
 let i = 0;
 let ans = 0;
 while (n !== 0) {
