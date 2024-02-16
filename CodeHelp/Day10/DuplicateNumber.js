@@ -13,21 +13,21 @@ function FindDuplicateNumber(arr) {
 }
 
 // let result = FindDuplicateNumber(arr);
-// console.log(result);
-// function FindDuplicateNumber(arr){
-//     let Obj = {};
-//     for(let i=0;i<arr.length;i++){
-//         if(Obj[arr[i]]===undefined){
-//             Obj[arr[i]]=1;
-//         }else{
-//             Obj[arr[i]]++;
-//         }
-//     }
-//     let result = [];
-//     for(let key in Obj){
-//         if(Obj[key]===2){
-//             result.push(key);
-//         }
-//     }
-//     return result;
-// }
+console.log(result);
+function FindDuplicateNumber(arr){
+    let Obj = {};
+    for(let i=0;i<arr.length;i++){
+        if(Obj[arr[i]]===undefined){
+            Obj[arr[i]]=1;
+        }else{
+            Obj[arr[i]]++;
+        }
+    }
+    let result = [];
+    for(let key in Obj){
+        if(Obj[key]===2){
+            result.push(key);
+        }
+    }
+    return result;
+}

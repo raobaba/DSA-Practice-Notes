@@ -1,8 +1,16 @@
-let arr = [1,2,3,4,5,6,7,8,9];
+let arr = ["h","e","l","l","o"]
 
-let bag = [];
+let bag = "";
+let start = 0;
+let end = arr.length-1;
 
-for(let i=arr.length-1;i>=0;i--){
-    bag.push(arr[i])
+while(start<=end){
+    const temp = arr[start];
+    arr[start] = arr[end];
+    arr[end] = temp
+    start++;
+    end--;
 }
-console.log(bag)
+console.log(arr)
+
+

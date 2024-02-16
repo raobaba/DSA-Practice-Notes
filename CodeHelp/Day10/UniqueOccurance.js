@@ -18,5 +18,4 @@ function UniqueOccurance(arr){
         UniqueCount[Obj[unique]]=true;
     }
     return true;
-
 }
